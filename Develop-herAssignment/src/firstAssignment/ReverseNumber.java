@@ -11,7 +11,7 @@ public class ReverseNumber {
 	private int reverseNumber(int number ){
 	    	
 	    	 int reversenum=0;
-			    
+			    //loop until last digit
 			    while(number!=0){
 			    	//Find the unit (last digit) of the number
 			    	int unit= number%10;	
