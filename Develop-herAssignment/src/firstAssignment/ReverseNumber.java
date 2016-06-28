@@ -25,21 +25,39 @@ public class ReverseNumber {
 			    
 	    }
 	
-
 	public static void main(String[] args) {  
 		
-		    Scanner userInput = new Scanner(System.in) ;
-			 //Prompt the user for Input and store in variable
-		 	System.out.println("Enter the number you want to be reversed" ) ;
-		 	int num =userInput.nextInt();
-		   
-		 	ReverseNumber rev = new ReverseNumber();
-		 	
-		    //Print the reversed number
-		 	System.out.println("reversed number="+ rev.reverseNumber(num) ) ;
+		String next   ="Yes"; 
+		Scanner userInput = new Scanner(System.in) ;
+		Scanner nextInput = new Scanner(System.in) ;
+		
+		//loop until user does not want to enter the number.
+		while(next.equalsIgnoreCase("Yes")){
+			
+			    //Prompt the user for Input and store in variable
+			 	System.out.println("Enter the number you want to be reversed" ) ;
+			 	int num;
+				num = userInput.nextInt();
+				
+			 	ReverseNumber rev = new ReverseNumber();
+			 	
+			    //Print the reversed number by calling reverseNumber method. 
+			 	System.out.println("reversed number="+ rev.reverseNumber(num) ) ;
+			 	
+			 	//prompt the user for another Input and store in variable 
+			 	System.out.println("Do you want to enter one more number : Enter Yes or No ") ;
+			 	next =nextInput.nextLine();
+			 	
+			 	System.out.println("You have entered " + next) ;
+			}
+		    // close the scanner if user does not enter another number.
+		    System.out.println("Closing Scanners...");
+		    nextInput.close();
+		    userInput.close();
 		    
 		}
 		    
+	
 }
 
 
